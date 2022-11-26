@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>The William Zoo connects communities with animals, inspiring action to save wildlife.</p>
+    <br>
+
+   @if(User.Identity.IsAuthenticated)
+   {
+        <text>User is logged in</text>
+   }
+</div>
+
+
+<style>
+
+.text-center {
+    font-family: "Lato", sans-serif;
+    font-size: 30px; 
+    }
+
+</style>

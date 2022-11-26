@@ -1,0 +1,66 @@
+﻿@model List<ZooWebsite.Models.animals>
+@{
+    ViewData["Title"] = "Our Animals";
+}
+<h1>Our Animals</h1>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+    <style>
+
+
+        .w3-bar-block .w3-bar-item {
+            padding: 20px
+        }
+
+        .wbox {
+            box-shadow: 0 0 0 4px #fff;
+
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+
+        
+
+
+    </style>
+</head>
+<body>
+    
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:10px; margin-bottom:50px">
+
+        <!-- First Photo Grid-->
+        <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+            <div class="w3-quarter">
+            @foreach (var item in Model) 
+            {
+ 
+                <div class="wbox">
+                        <img src="@item.image_path" alt="@item.animal_name" style="width:100%">
+                   </div>
+                <h3>@item.animal_name</h3>
+                <p>@item.description</p>
+            }
+            </div>
+            
+        </div>
+
+        
+
+</body>
+</html>
+
+
+

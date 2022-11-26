@@ -1,0 +1,128 @@
+﻿ @model IEnumerable<ZooWebsite.Models.employees>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Employees</h1>
+
+
+<br>
+
+
+
+<div class="form-group">
+    <input type="button" value="New Employee" class="btn btn-primary" onclick=" location.href='@Url.Action("Create")' " />
+</div>
+
+<br>
+
+
+<!-- CSS Code: Place this code in the document's head (between the <head> -- </head> tags) -->
+
+<style>
+
+
+
+    div.container {
+        margin-left: 240px;
+    }
+
+    div.container-fluid {
+        padding: 0;
+    }
+
+    table {
+        background-color: #FFFFFF;
+        border-collapse: collapse;
+        border-width: 1px;
+        border-color: #EDEDED;
+        border-style: solid;
+        color: #000000;
+        font-family: 'Source Sans Pro', sans-serif;
+        border-spacing: 10px;
+    }
+
+    .wraplines {
+        white-space: nowrap;
+    }
+
+    .wraptwolines {
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    td {
+        border-color: #EDEDED;
+        border-style: solid;
+        padding: 15px;
+    }
+
+    th, thead {
+        background-color: black;
+        color: white;
+        padding: 15px;
+    }
+
+
+
+    tr:nth-child(even) {
+        background-color: #EEEEEE;
+    }
+
+</style>
+
+
+
+
+<!-- HTML Code: Place this code in the document's body (between the <body> tags) where the table should appear -->
+<div class="container-fluid">
+    <table>
+        <thead>
+            <tr style="white-space:nowrap">
+                <th>FIRST NAME</th>
+                <th>MIDDLE NAME</th>
+                <th>LAST NAME</th>
+                <th>BIRTH_DATE</th>
+                <th>SEX</th>
+                <th>ADDRESS</th>
+                <th>CITY</th>
+                <th>STATE</th>
+                <th>ZIP</th>
+                <th>PHONE</th>
+                <th>EMAIL</th>
+                <th>JOB</th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="wraplines">@Html.DisplayFor(modelItem => item.first_name)</td>
+                    <td class="wraplines">@Html.DisplayFor(modelItem => item.middle_name)</td>
+                    <td class="wraptwolines">@Html.DisplayFor(modelItem => item.last_name)</td>
+                    <td class="wraplines">@Html.DisplayFor(modelItem => item.birth_date)</td>
+                    <td class="wraplines">@Html.DisplayFor(modelItem => item.sex)</td>
+                    <td class="wraplines">@Html.DisplayFor(modelItem => item.address_1)</td>
+                    <td class="wraplines">@Html.DisplayFor(modelItem => item.city)</td>
+                    <td class="wraplines">@Html.DisplayFor(modelItem => item.state)</td>
+                    <td class="wraplines">@Html.DisplayFor(modelItem => item.zip)</td>
+                    <td class="wraplines">@Html.DisplayFor(modelItem => item.phone)</td>
+                    <td class="wraplines">@Html.DisplayFor(modelItem => item.email)</td>
+                    <td class="wraplines">@Html.DisplayFor(modelItem => item.job)</td>
+
+                    <td class="wraplines">
+                        <a asp-action="Edit" asp-route-id="@item.id">Edit</a>
+                        <a asp-action="Details" asp-route-id="@item.id">Details</a>
+                        <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

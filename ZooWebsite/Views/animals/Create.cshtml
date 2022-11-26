@@ -1,0 +1,120 @@
+﻿@model ZooWebsite.Models.animals
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<style>
+    div.container {
+        background-color: #EEEEEE;
+        border-radius: 10px;
+        border-color: black;
+        border-style: solid;
+        border-width: 1px;
+    }
+
+    input::placeholder {
+        font: 15px sans-serif;
+        font-style: italic;
+    }
+
+    .newhabitat{
+        position:absolute; 
+        left:730px;
+        top:535px;
+    }
+
+
+</style>
+
+<h1>Create</h1>
+
+<h4>Animal</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="animal_name" class="control-label">Name</label>
+                <input asp-for="animal_name" class="form-control" placeholder="*Required field*" />
+                <span asp-validation-for="animal_name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="scientific_name" class="control-label">Scientific Name</label>
+                <input asp-for="scientific_name" class="form-control" placeholder="*Required field*" />
+                <span asp-validation-for="scientific_name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="description" class="control-label">Description</label>
+                <input asp-for="description" class="form-control" placeholder="*Required field*" />
+                <span asp-validation-for="description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="sex" class="control-label">Sex</label>
+                <select asp-for="sex" asp-items="(List<SelectListItem>)ViewBag.genderitems" class="form-control" ></select> 
+                <span asp-validation-for="sex" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="age" class="control-label">Age</label>
+                <input asp-for="age" class="form-control" placeholder="*Required field*" />
+                <span asp-validation-for="age" class="text-danger"></span>
+              
+            </div>
+            <div class="form-group">
+                <label asp-for="habitat_id" class="control-label">Habitat</label>
+                <select asp-for="habitat_id" asp-items="(List<SelectListItem>)ViewBag.habitatitems" class="form-control" placeholder="*Required field*"></select>
+                <span asp-validation-for="habitat_id" class="text-danger"></span>
+            </div>
+            <div class="newhabitat">
+                <a asp-area="" asp-controller="habitats" asp-action="Create">Need a new habitat?</a>
+            </div>
+            <div class="form-group">
+                <label asp-for="meal_time" class="control-label">Meal Time</label>
+                <select asp-for="meal_time" asp-items="(List<SelectListItem>)ViewBag.times" class="form-control"></select>
+                <span asp-validation-for="meal_time" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="meal_type" class="control-label">Meal Type</label>
+                <input asp-for="meal_type" class="form-control"  />
+                <span asp-validation-for="meal_type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="place_of_origin" class="control-label">Place of Origin</label>
+                <input asp-for="place_of_origin" class="form-control"  />
+                <span asp-validation-for="place_of_origin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="health_records" class="control-label">Health Status</label>
+                <select asp-for="health_records" asp-items="(List<SelectListItem>)ViewBag.health" class="form-control"></select>
+                <span asp-validation-for="health_records" class="text-danger"></span>
+            </div>
+            <br>
+            <div class="form-group">
+                <label asp-for="animal_image" class="control-label">Choose your new image:</label>
+                <input type="file" asp-for="animal_image" ></input>
+            </div>
+
+            
+            <hr>
+   
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+        <br>
+        <br>
+         <br>
+        <h4>Habitats Available for your Animal:</h4>
+        <hr />
+        
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

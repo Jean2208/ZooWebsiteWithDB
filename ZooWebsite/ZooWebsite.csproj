@@ -1,0 +1,82 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-ZooWebsite-E854242D-1DDE-46EA-B333-4B8C9460413D</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="System\**" />
+    <Compile Remove="Views\employees\**" />
+    <Compile Remove="Views\Reports\**" />
+    <Content Remove="System\**" />
+    <Content Remove="Views\employees\**" />
+    <Content Remove="Views\Reports\**" />
+    <EmbeddedResource Remove="System\**" />
+    <EmbeddedResource Remove="Views\employees\**" />
+    <EmbeddedResource Remove="Views\Reports\**" />
+    <None Remove="System\**" />
+    <None Remove="Views\employees\**" />
+    <None Remove="Views\Reports\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Areas\Identity\Pages\Account\ConfirmEmail.cshtml.cs" />
+    <Compile Remove="Areas\Identity\Pages\Account\ConfirmEmailChange.cshtml.cs" />
+    <Compile Remove="Areas\Identity\Pages\Account\RegisterConfirmation.cshtml.cs" />
+    <Compile Remove="Areas\Identity\Pages\Account\ResendEmailConfirmation.cshtml.cs" />
+    <Compile Remove="Controllers\Login.cs" />
+    <Compile Remove="Controllers\ReportsController.cs" />
+    <Compile Remove="Models\Reports1.cs" />
+    <Compile Remove="Models\ZooLogin.cs" />
+    <Compile Remove="Views\Home\Query.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Areas\Identity\Pages\Account\ConfirmEmail.cshtml" />
+    <Content Remove="Areas\Identity\Pages\Account\ConfirmEmailChange.cshtml" />
+    <Content Remove="Areas\Identity\Pages\Account\RegisterConfirmation.cshtml" />
+    <Content Remove="Areas\Identity\Pages\Account\ResendEmailConfirmation.cshtml" />
+    <Content Remove="Views\Home\Animals.cshtml" />
+    <Content Remove="Views\Home\Index1.cshtml" />
+    <Content Remove="Views\Home\LoginPage.cshtml" />
+    <Content Remove="Views\Home\Privacy.cshtml" />
+    <Content Remove="Views\Home\Query.cshtml" />
+    <Content Remove="Views\Home\ZooLogin.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Views\animals\Index.cshtml.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.10" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.10" />
+    <PackageReference Include="MySql.Data" Version="8.0.31" />
+    <PackageReference Include="MySql.EntityFrameworkCore" Version="6.0.7" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Views\employees\Create.cshtml" />
+    <Content Include="Views\employees\Delete.cshtml" />
+    <Content Include="Views\employees\Details.cshtml" />
+    <Content Include="Views\employees\Edit.cshtml" />
+    <Content Include="Views\employees\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Images\BGanimalimg.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Uploads\Animals\" />
+  </ItemGroup>
+
+</Project>

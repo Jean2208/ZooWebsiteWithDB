@@ -1,0 +1,33 @@
+﻿@model List<ZooWebsite.Models.animals>
+@{
+    ViewData["Title"] = "Query page";
+}
+
+<h1>Query</h1>
+
+<p>querying table as test</p>
+
+<table class="table table-bordered">
+    <thread>
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+        
+        </tr>
+    </thread>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.id</td>
+                <td>@item.animal_name</td>
+                <td>@item.scientific_name</td>
+                
+             
+            </tr>
+        }
+    </tbody>
+</table>
+
+
