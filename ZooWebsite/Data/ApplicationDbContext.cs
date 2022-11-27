@@ -17,5 +17,11 @@ namespace ZooWebsite.Data
 
         public DbSet<animals> animals { get; set; }
 
+        public DbSet<items> items { get; set; }
+
+        public DbSet<sales> sales { get; set; }
+
+        public DbSet<message_board> message_board { get; set; }
+
     }
 }

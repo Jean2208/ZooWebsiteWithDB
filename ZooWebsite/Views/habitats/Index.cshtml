@@ -4,50 +4,133 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.habitat_name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.type)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.daily_maintenance_costs)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.habitat_name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.type)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.daily_maintenance_costs)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+
+
+
+<h1>Habitats</h1>
+
+
+<br>
+
+
+
+<div class="form-group">
+    <input type="button" value="Create New Habitat" class="btn btn-primary" onclick=" location.href='@Url.Action("Create")' " />
+</div>
+
+<br>
+
+
+<!-- CSS Code: Place this code in the document's head (between the <head> -- </head> tags) -->
+
+<style>
+
+
+
+    div.container {
+        margin-left: 460px;
+    }
+
+    div.container-fluid {
+        padding: 0;
+    }
+
+    table {
+        background-color: #FFFFFF;
+        border-collapse: collapse;
+        border-width: 1px;
+        border-color: #EDEDED;
+        border-style: solid;
+        color: #000000;
+        font-family: 'Source Sans Pro', sans-serif;
+        border-spacing: 10px;
+    }
+
+    .wraplines {
+        white-space: nowrap;
+    }
+
+    .wraptwolines {
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    td {
+        border-color: #EDEDED;
+        border-style: solid;
+        padding: 15px;
+    }
+
+    th, thead {
+        background-color: black;
+        color: white;
+        padding: 15px;
+    }
+
+
+
+    tr:nth-child(even) {
+        background-color: #EEEEEE;
+    }
+</style>
+
+
+
+
+<!-- HTML Code: Place this code in the document's body (between the <body> tags) where the table should appear -->
+<div class="container-fluid">
+    <table>
+        <thead>
+            <tr style="white-space:nowrap">
+                <th>NAME</th>
+                <th>DESCRIPTION</th>
+                <th class="wraptwolines">HABITAT TYPE</th>
+                <th>DAILY MAINTENANCE COSTS</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="wraplines">@Html.DisplayFor(modelItem => item.habitat_name)</td>
+                    <td class="wraptwolines">@Html.DisplayFor(modelItem => item.description)</td>
+                    <td class="wraplines">@Html.DisplayFor(modelItem => item.type)</td>
+                    <td class="wraplines">@Html.DisplayFor(modelItem => item.daily_maintenance_costs)</td>
+
+                    <td class="wraplines">
+                        <a asp-action="Edit" asp-route-id="@item.id">Edit</a>
+                        <a asp-action="Details" asp-route-id="@item.id">Details</a>
+                        <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<!-- Generated at CSSPortal.com -->
+
+
+
+<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+
+<script src="vendor/bootstrap/js/popper.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<script src="vendor/select2/select2.min.js"></script>
+
+<script src="js/main.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-23581568-13');</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon='{"rayId":"76e319bf993716b9","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2022.11.3","si":100}' crossorigin="anonymous"></script>

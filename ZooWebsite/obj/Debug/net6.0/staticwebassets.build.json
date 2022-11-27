@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "97Fs0dQr/2f7acaBLt77pLtTanofPC2zfDbBT8tzJ3Q=",
+  "Hash": "YZgNOzpLTq6dlevpw8BpUfjbEInUr3CWjUgRUmb8lvw=",
   "Source": "ZooWebsite",
   "BasePath": "_content/ZooWebsite",
   "Mode": "Default",
@@ -2210,6 +2210,23 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\Animals\\chilean_flamingo.jpg"
     },
     {
+      "Identity": "E:\\Downloads\\ZooWebsite\\ZooWebsite\\wwwroot\\Uploads\\Animals\\chilean_flamingo2.jpg",
+      "SourceId": "ZooWebsite",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Downloads\\ZooWebsite\\ZooWebsite\\wwwroot\\",
+      "BasePath": "_content/ZooWebsite",
+      "RelativePath": "Uploads/Animals/chilean_flamingo2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\Animals\\chilean_flamingo2.jpg"
+    },
+    {
       "Identity": "E:\\Downloads\\ZooWebsite\\ZooWebsite\\wwwroot\\Uploads\\Animals\\elephant.jpg",
       "SourceId": "ZooWebsite",
       "SourceType": "Discovered",
@@ -2225,6 +2242,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Uploads\\Animals\\elephant.jpg"
+    },
+    {
+      "Identity": "E:\\Downloads\\ZooWebsite\\ZooWebsite\\wwwroot\\Uploads\\Animals\\giraffe.jpg",
+      "SourceId": "ZooWebsite",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Downloads\\ZooWebsite\\ZooWebsite\\wwwroot\\",
+      "BasePath": "_content/ZooWebsite",
+      "RelativePath": "Uploads/Animals/giraffe.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\Animals\\giraffe.jpg"
     },
     {
       "Identity": "E:\\Downloads\\ZooWebsite\\ZooWebsite\\wwwroot\\Uploads\\Animals\\K1.jpg",

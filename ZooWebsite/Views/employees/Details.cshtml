@@ -4,27 +4,109 @@
     ViewData["Title"] = "Details";
 }
 
+<style>
+    div.container {
+        background-color: #EEEEEE;
+        border-radius: 10px;
+        border-color: black;
+        border-style: solid;
+        border-width: 1px;
+    }
+
+    input::placeholder {
+        font: 15px sans-serif;
+        font-style: italic;
+    }
+
+    .newhabitat {
+        position: absolute;
+        left: 730px;
+        top: 535px;
+    }
+
+</style>
+
 <h1>Details</h1>
 
 <div>
-    <h4>employees</h4>
+    <h4>Employee</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.first_name)
+        <dt class="col-sm-2">
+            First Name
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.first_name)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.last_name)
+        <dt class="col-sm-2">
+            Middle Name
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.middle_name)
+        </dd>
+        <dt class="col-sm-2">
+            Last Name
+        </dt>
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.last_name)
+        </dd>
+        <dt class="col-sm-2">
+            Birth Date
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.birth_date)
+        </dd>
+        <dt class="col-sm-2">
+            Sex
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.sex)
+        </dd>
+        <dt class="col-sm-2">
+            Address
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.address_1)
+        </dd>
+        <dt class="col-sm-2">
+            City
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.city)
+        </dd>
+        <dt class="col-sm-2">
+            State
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.state)
+        </dd>
+        <dt class="col-sm-2">
+            Zip
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.zip)
+        </dd>
+        <dt class="col-sm-2">
+            Phone
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.phone)
+        </dd>
+        <dt class="col-sm-2">
+            Email
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.email)
+        </dd>
+        <dt class="col-sm-2">
+            Job
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.job)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.id">Edit</a> |
+    <a asp-action="Edit" asp-route-id="@Model?.id">Edit</a> 
     <a asp-action="Index">Back to List</a>
 </div>

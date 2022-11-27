@@ -195,6 +195,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcaGFiaXRhdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/Downloads/ZooWebsite/ZooWebsite/Views/Home/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Downloads/ZooWebsite/ZooWebsite/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -215,8 +219,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZXBvcnQzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Downloads/ZooWebsite/ZooWebsite/Views/Home/Tickets.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUaWNrZXRzLmNzaHRtbA==
+[E:/Downloads/ZooWebsite/ZooWebsite/Views/sales/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2FsZXNcQ2hlY2tvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Downloads/ZooWebsite/ZooWebsite/Views/sales/Shop.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2FsZXNcU2hvcC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Downloads/ZooWebsite/ZooWebsite/Views/Shared/Error.cshtml]

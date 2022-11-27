@@ -30,12 +30,12 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="OurAnimals">Our Animals!</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Tickets">Shop</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="sales" asp-action="Shop">Shop</a>
                         </li>
                         @if (User.IsInRole("Employee") || User.IsInRole("Admin"))
                         {
-                            <li class="nav-item dropdown" style="color: black">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <li class="nav-item dropdown" >
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black">
                                     Reports
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -62,8 +62,8 @@
 
                           @if (User.IsInRole("Employee") || User.IsInRole("Admin"))
                         {
-                            <li class="nav-item dropdown" style="color: black">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <li class="nav-item dropdown" >
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black">
                                     Data Entries
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -87,6 +87,13 @@
                                         </li>
                                     }
                                 </ul>
+                            </li>
+                        }
+
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard">Dashboard</a>
                             </li>
                         }
 

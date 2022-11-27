@@ -49,6 +49,27 @@ namespace ZooWebsite.Controllers
         // GET: employees/Create
         public IActionResult Create()
         {
+
+            var genderitems = new List<SelectListItem>();
+            genderitems.Add(new SelectListItem() { Text = "Male", Value = "M" });
+            genderitems.Add(new SelectListItem() { Text = "Female", Value = "F" });
+
+
+            var states = new List<SelectListItem>();
+            states.Add(new SelectListItem() { Text = "TX", Value = "TX" });
+            states.Add(new SelectListItem() { Text = "FL", Value = "FL" });
+            states.Add(new SelectListItem() { Text = "NY", Value = "NY" });
+
+
+            var jobs = new List<SelectListItem>();
+            jobs.Add(new SelectListItem() { Text = "Restaurants", Value = "Restaurants" });
+            jobs.Add(new SelectListItem() { Text = "Gift Shop", Value = "Gift Shop" });
+            jobs.Add(new SelectListItem() { Text = "Habitats", Value = "Habitats" });
+
+            ViewBag.genderitems = genderitems;
+            ViewBag.states = states;
+            ViewBag.jobs = jobs;    
+
             return View();
         }
 
@@ -57,7 +78,7 @@ namespace ZooWebsite.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,first_name,last_name")] employees employees)
+        public async Task<IActionResult> Create([Bind("id,first_name, middle_name, last_name, birth_date, sex, address_1, city, state, zip, phone, email, job")] employees employees)
         {
             if (ModelState.IsValid)
             {
@@ -81,6 +102,27 @@ namespace ZooWebsite.Controllers
             {
                 return NotFound();
             }
+
+            var genderitems = new List<SelectListItem>();
+            genderitems.Add(new SelectListItem() { Text = "Male", Value = "M" });
+            genderitems.Add(new SelectListItem() { Text = "Female", Value = "F" });
+
+
+            var states = new List<SelectListItem>();
+            states.Add(new SelectListItem() { Text = "TX", Value = "TX" });
+            states.Add(new SelectListItem() { Text = "FL", Value = "FL" });
+            states.Add(new SelectListItem() { Text = "NY", Value = "NY" });
+
+
+            var jobs = new List<SelectListItem>();
+            jobs.Add(new SelectListItem() { Text = "Restaurants", Value = "Restaurants" });
+            jobs.Add(new SelectListItem() { Text = "Gift Shop", Value = "Gift Shop" });
+            jobs.Add(new SelectListItem() { Text = "Habitats", Value = "Habitats" });
+
+            ViewBag.genderitems = genderitems;
+            ViewBag.states = states;
+            ViewBag.jobs = jobs;
+
             return View(employees);
         }
 
@@ -89,7 +131,7 @@ namespace ZooWebsite.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,first_name,last_name")] employees employees)
+        public async Task<IActionResult> Edit(int id, [Bind("id,first_name, middle_name, last_name, birth_date, sex, address_1, city, state, zip, phone, email, job")] employees employees)
         {
             if (id != employees.id)
             {

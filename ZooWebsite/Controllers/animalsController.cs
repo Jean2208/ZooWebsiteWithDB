@@ -1,14 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using MySqlX.XDevAPI;
 using ZooWebsite.Data;
 using ZooWebsite.Models;
 using ZooWebsite.Models.ViewModels;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace ZooWebsite.Controllers
 {
@@ -129,27 +133,56 @@ namespace ZooWebsite.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        
         public async Task<IActionResult> Create([Bind("id,animal_name,scientific_name,description,sex,age,habitat_id,meal_time,meal_type,place_of_origin,health_records, animal_image")] animals animals)
         {
-            if (ModelState.IsValid)
+            try
             {
-               if(animals.animal_image !=null && animals.animal_image.Length > 0)
+                if (ModelState.IsValid)
                 {
-                    var filepath = Path.Combine(_environment.WebRootPath, "Uploads/Animals/") + animals.animal_image.FileName;
-                    var savepath = "/Uploads/Animals/" + animals.animal_image.FileName;
-                    
-
-                    using (var stream = System.IO.File.Create(filepath))
+                    if (animals.animal_image != null && animals.animal_image.Length > 0)
                     {
-                        animals.animal_image.CopyTo(stream);
+                        var filepath = Path.Combine(_environment.WebRootPath, "Uploads/Animals/") + animals.animal_image.FileName;
+                        var savepath = "/Uploads/Animals/" + animals.animal_image.FileName;
+
+
+                        using (var stream = System.IO.File.Create(filepath))
+                        {
+                            animals.animal_image.CopyTo(stream);
+                        }
+
+                        animals.image_path = savepath;
                     }
 
-                    animals.image_path = savepath;
-                } 
-                _context.Add(animals);
-                await _context.SaveChangesAsync();
+
+                    _context.Add(animals);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
+            }
+            catch (SqlException )
+            {
+                TempData["ErrorMessage"] = "Your Error Message";
+                return RedirectToAction(nameof(Index));
+
+            }
+            catch (DbException )
+            {
+                TempData["ErrorMessage"] = "Your Error Message";
                 return RedirectToAction(nameof(Index));
             }
+            catch (Exception )
+            {
+                TempData["ErrorMessage"] = "Your Error Message";
+                return RedirectToAction(nameof(Index));
+            }
+            finally
+            {
+                ;
+            }
+
+
+          
             return View(animals);
         }
 
@@ -249,6 +282,11 @@ namespace ZooWebsite.Controllers
 
             }
             return View(animals);
+        }
+
+        public IActionResult ErrorHandler()
+        {
+            return View();
         }
 
         // GET: animals/Delete/5

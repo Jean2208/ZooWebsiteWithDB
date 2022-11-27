@@ -20,7 +20,7 @@ namespace ZooWebsite.Models
         public string? last_name { get; set; }
 
 
-        [Required]
+        [Required(ErrorMessage = "This field is required")]
         [DataType(DataType.Date)]
         public DateTime birth_date { get; set; }
 
@@ -41,7 +41,7 @@ namespace ZooWebsite.Models
         public string? address_2 { get; set; }
 
 
-
+        [Required(ErrorMessage = "This field is required")]
         [StringLength(50, ErrorMessage = "Maximum length is 50.")]
         public string? city { get; set; }
 

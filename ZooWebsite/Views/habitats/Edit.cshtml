@@ -4,9 +4,31 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<style>
+    div.container {
+        background-color: #EEEEEE;
+        border-radius: 10px;
+        border-color: black;
+        border-style: solid;
+        border-width: 1px;
+    }
 
-<h4>habitats</h4>
+    input::placeholder {
+        font: 15px sans-serif;
+        font-style: italic;
+    }
+
+    .newhabitat {
+        position: absolute;
+        left: 740px;
+        top: 535px;
+    }
+</style>
+
+<h1>Edit</h1>
+<h4>Habitat</h4>
+
+
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -14,23 +36,23 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="id" />
             <div class="form-group">
-                <label asp-for="habitat_name" class="control-label"></label>
-                <input asp-for="habitat_name" class="form-control" />
+                <label asp-for="habitat_name" class="control-label">Habitat Name</label>
+                <input asp-for="habitat_name" class="form-control" placeholder="*Required field*" />
                 <span asp-validation-for="habitat_name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="description" class="control-label"></label>
+                <label asp-for="description" class="control-label">Description</label>
                 <input asp-for="description" class="form-control" />
                 <span asp-validation-for="description" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="type" class="control-label"></label>
+                <label asp-for="type" class="control-label">Habitat Type</label>
                 <input asp-for="type" class="form-control" />
                 <span asp-validation-for="type" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="daily_maintenance_costs" class="control-label"></label>
-                <input asp-for="daily_maintenance_costs" class="form-control" />
+                <label asp-for="daily_maintenance_costs" class="control-label">Daily Maintenance Costs</label>
+                <input asp-for="daily_maintenance_costs" class="form-control" placeholder="*Required field*" />
                 <span asp-validation-for="daily_maintenance_costs" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -45,5 +67,7 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

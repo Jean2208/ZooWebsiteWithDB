@@ -40,7 +40,7 @@ namespace ZooWebsite.Models
 
 
 
-        public TimeSpan? meal_time { get; set; }
+        public string? meal_time { get; set; }
 
 
         [StringLength(100, ErrorMessage = "Maximum length is 100.")]
