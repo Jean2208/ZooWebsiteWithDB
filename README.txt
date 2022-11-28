@@ -26,16 +26,21 @@ The most important folders and files that we have coded, created and used are th
 
 	The folder Views stores all the tabs,  HTML and majority of the CSS code for our website:
 
-		/Views/animals  Has the create, Delete, Details, Edit and Index pages for the animals data entry.
+		/Views/animals --> Has the create, Delete, Details, Edit and Index pages for the animals data entry.
 
-		/Views/employees  Has the create, Delete, Details, Edit and Index pages for the employees data entry.
+		/Views/employees --> Has the create, Delete, Details, Edit and Index pages for the employees data entry.
 
-		/Views/habitats  Has the create, Delete, Details, Edit and Index pages for the habitats data entry.
+		/Views/habitats --> Has the create, Delete, Details, Edit and Index pages for the habitats data entry.
 
-		/Views/Home  Has the Dashboard.csthml (displayed as the Notifications tab in our website). Index.csthml file which is the Home page of the website. OurAnimals.csthml dislays the information for the Our Animals! tab. Report1.cshtml corresponds to Animal Report, Report2.cshtml corresponds to Revenue Report, and Report3.cshtml corresponds to Employee Report, these reports were created using Looker Studio and using a query to extract the data from our database.
+		/Views/Home --> Has the Dashboard.csthml (displayed as the Notifications tab in our website). Index.csthml file 
+		which is the Home page of the website. OurAnimals.csthml dislays the information for the Our Animals! tab. 
+		Report1.cshtml corresponds to Animal Report, Report2.cshtml corresponds to Revenue Report, and Report3.cshtml 
+		corresponds to Employee Report, these reports were created using Looker Studio and using a query to extract 
+		the data from our database.
 
-		/Views/sales  Has the Checkout.cshtml, Shop.cshtml and SuccessPage.cshtml pages.  Corresponding the Checkout, Shop and Success pages shown in the website. 
+		/Views/sales --> Has the Checkout.cshtml, Shop.cshtml and SuccessPage.cshtml pages.  Corresponding the Checkout, 
+		Shop and Success pages shown in the website. 
 	
-		/Views/Shared  Contains _Layout.cshtml which is the file that displays the top bar navigation.
+		/Views/Shared --> Contains _Layout.cshtml which is the file that displays the top bar navigation.
 
 
