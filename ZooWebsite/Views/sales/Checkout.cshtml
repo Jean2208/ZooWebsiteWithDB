@@ -12,7 +12,7 @@
         body {
             font-family: Arial;
             font-size: 17px;
-            padding: 8px;
+            
         }
 
         * {
@@ -103,55 +103,79 @@
             color: grey;
         }
 
+        .form-control{
+            width:50%;
+        }
+
+        .btn-primary{
+            width:150px;
+        }
+
+        .total{
+            position:absolute;
+            right:600px;
+            top:200px;
+        }
+
+        
+
  </style>
 
-<h1>Create</h1>
+ 
+ 
+ 
+ <h1>Checkout</h1>
+    
 
-<h4>sales</h4>
-
-
-   
 <hr />
 <div class="row">
     <div class="col-md-4">
        <form asp-action="Create" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-group">
-                    <label asp-for="item_id" class="control-label" >Item</label>
-                    <select asp-for="item_id" asp-items="(List<SelectListItem>)ViewBag.products" class="form-control"></select>
+                    <label asp-for="item_id">Item</label>
+                    <option disabled><select asp-for="item_id" asp-items="(List<SelectListItem>)ViewBag.products" class="form-control"></select></option>
                     <span asp-validation-for="item_id" class="text-danger"></span>
                 </div>
+                <br>
+               <div class="form-group">
+                    <label asp-for="item_price">Price</label>
+                    <option disabled><select asp-for="item_price" asp-items="(List<SelectListItem>)ViewBag.prices" class="form-control"></select></option>
+                    <span asp-validation-for="item_price" class="text-danger"></span>
+                </div>
+                <br>
                 <div class="form-group">
                     <label asp-for="quantity" class="control-label">Enter Quantity</label>
                     <input asp-for="quantity" class="form-control"  />
                     <span asp-validation-for="quantity" class="text-danger"></span>
-                </div>     
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Buy" class="btn btn-primary" />
+                </div>
         </form>
     </div>
 </div>
+<div class="total">
+    <h2>Your total</h2>
+    <h3>23$</h3>
+</div>
 
-
-
-
-
-
+ <br>
+ <br>
 </head>
 <body>
 
-    <h2>Checkout</h2>
-    <p>Thank you for supporting the William Zoo.</p>
+   
     <div class="row">
         <div class="col-75">
             <div class="container">
-                <form asp-action="">
+                
                     <div class="row">
                         <div class="col-50">
                             <h3>Billing Address</h3>
                             <label for="fname"><i class="fa fa-user"></i> First Name</label>
-                            <input type="text" id="fname" name="firstname" placeholder="John">
+                            <input for="customer_fname" class="form-control" />
                             <label for="lname"><i class="fa fa-user"></i> Last Name</label>
                             <input type="text" id="fname" name="firstname" placeholder="Doe">
                             <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
@@ -199,8 +223,7 @@
                         </div>
 
                     </div>
-                    <input type="submit" value="Buy" class="btn">
-                </form>
+               
             </div>
         </div>
     </div>

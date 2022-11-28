@@ -4,48 +4,82 @@
     ViewData["Title"] = "Shop";
 }
 
-<head>
-    <style>
-        body {
-            background-image: url(https://cdn.shopify.com/s/files/1/0536/6133/5723/products/EBF3CB_600x.png?v=1611602358),url(https://patch.com/img/cdn20/shutterstock/25866962/20220512/113433/styles/patch_image/public/shutterstock-1857369271-1___12113357732.jpg?width=1200);
-            background-repeat: no-repeat, no-repeat;
-            background-size: 60% 100%;
-            background-position: left top, right top;
-        }
-    </style>
-
-</head>
-<body>
-
-    <h1 style="font-family:Helvetica;  font-size:60px; text-align: left; color: black" ;>Buy Tickets</h1>
-    <h1>Enter Quantity of Tickets</h1>
 
 
-</body>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body{
+        font-size:large;
+    }
+
+
+
+    /* Create two equal columns that floats next to each other */
+    .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+    }
+    .img {
+        float: right;
+        width: 70%;
+        height: 70%;
+        object-fit: cover;
+        border: 10px solid black;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+</style>
+
+
+
+
+<h1>Take a look at our Shop!</h1>
+
+
+
 
 
 <div class="form">
     @foreach (var item in Model)
     {
-    <h3>@Html.DisplayFor(modelItem => item.name)</h3>
 
-    <h2>@Html.DisplayFor(modelItem => item.in_stock)</h2>
-
-        
-        
-            <div class="form-group">
-                <a asp-action="Checkout" asp-route-id="@item.id" class="btn btn-primary">Buy</a>
+         <div class="row">
+            <div class="column">
+                <div class="img">
+        <img src="@item.image_path" alt="@item.name" style="width:100%" />
+                    </div>
             </div>
-        
+
+            <div class="column">
+        <h2>@Html.DisplayFor(modelItem => item.name)</h2>
+
+        <h3>In stock: @Html.DisplayFor(modelItem => item.in_stock)</h3>
+
+        <h3>Price: @Html.DisplayFor(modelItem => item.price) $</h3>
+
+                </div>
+
+        </div>
+
+
+        <div class="form-group">
+            <a asp-action="Checkout" asp-route-id="@item.id" class="btn btn-primary" >Buy</a>
+        </div>
+
     }
 
-
-    <br />
-    <br />
-
-    <h2 style="font-style:italic; color:deeppink">@ViewBag.Result</h2>
-
 </div>
+
 
 
 

@@ -11,5 +11,7 @@
 
         public int in_stock { get; set; }
 
+        public string? image_path { get; set; }
+
     }
 }

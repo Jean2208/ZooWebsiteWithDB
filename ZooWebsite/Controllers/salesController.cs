@@ -34,17 +34,32 @@ namespace ZooWebsite.Controllers
         public IActionResult Checkout(int? id)
         {
             var product = _context.items;
+
             var products = new List<SelectListItem>();
 
             foreach (var item in product )
             {
                 if (item.id == id)
                 {
-                    products.Add(new SelectListItem() { Text = item.name, Value = item.id.ToString() });
+                    products.Add(new SelectListItem() { Text = item.name, Value = item.id.ToString() });  
                 }
             }
 
-            ViewBag.products = products;
+            var prices = new List<SelectListItem>();
+
+            foreach (var item in product)
+            {
+                if (item.id == id)
+                {
+                    prices.Add(new SelectListItem() { Text = item.price.ToString() + "$", Value = item.price.ToString() });
+                }
+
+            }
+
+
+
+                ViewBag.products = products;
+                ViewBag.prices = prices;
 
             return View();
 
@@ -52,7 +67,7 @@ namespace ZooWebsite.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("item_id, quantity")] sales sales)
+        public async Task<IActionResult> Create([Bind("item_id, item_price, quantity, customer_address, customer_lname, customer_fname")] sales sales)
         {
             if (ModelState.IsValid)
             {
