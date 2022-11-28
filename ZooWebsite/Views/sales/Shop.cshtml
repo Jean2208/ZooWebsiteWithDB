@@ -7,90 +7,75 @@
 
 
 
-<style>
-    * {
-        box-sizing: border-box;
-    }
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-    body{
-        font-size:large;
-    }
+        body {
+            font-size: large;
+        }
 
+        /* Create two equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 33.3333%;
+            padding: 10px;
+        }
 
+        .img {
+            float: right;
+            width: 70%;
+            height: 70%;
+            object-fit: cover;
+        }
 
-    /* Create two equal columns that floats next to each other */
-    .column {
-        float: left;
-        width: 50%;
-        padding: 10px;
-    }
-    .img {
-        float: right;
-        width: 70%;
-        height: 70%;
-        object-fit: cover;
-        border: 10px solid black;
-    }
-
-    /* Clear floats after the columns */
-    .row:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-</style>
-
-
-
-
-<h1>Take a look at our Shop!</h1>
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
 
 
+<body>
 
-
-
-<div class="form">
+    <h1>Take a Look at Our Shop!</h1>
     @foreach (var item in Model)
     {
-
-         <div class="row">
+        <div class="row">
             <div class="column">
                 <div class="img">
-        <img src="@item.image_path" alt="@item.name" style="width:100%" />
-                    </div>
+                    <img src="@item.image_path" alt="@item.name" style="width:100%" />
+                </div>
             </div>
 
+
             <div class="column">
-        <h2>@Html.DisplayFor(modelItem => item.name)</h2>
+                <h2>@Html.DisplayFor(modelItem => item.name)</h2>
 
-        <h3>In stock: @Html.DisplayFor(modelItem => item.in_stock)</h3>
+                <h3>In stock: @Html.DisplayFor(modelItem => item.in_stock)</h3>
 
-        <h3>Price: @Html.DisplayFor(modelItem => item.price) $</h3>
+                <h3>Price: @Html.DisplayFor(modelItem => item.price) $</h3>
 
+            </div>
+
+
+            <div class="column">
+                <div class="form-group">
+                    <a asp-action="Checkout" asp-route-id="@item.id" class="btn btn-primary">Buy</a>
                 </div>
 
+
+            </div>
+
         </div>
-
-
-        <div class="form-group">
-            <a asp-action="Checkout" asp-route-id="@item.id" class="btn btn-primary" >Buy</a>
-        </div>
-
     }
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</body>
+</html>

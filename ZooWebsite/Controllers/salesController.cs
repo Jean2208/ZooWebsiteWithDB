@@ -30,6 +30,13 @@ namespace ZooWebsite.Controllers
 
         [Authorize]
 
+        public IActionResult SuccessPage()
+        {
+            return View();
+        }
+
+        [Authorize]
+
         // GET: sales/Checkout
         public IActionResult Checkout(int? id)
         {
@@ -73,7 +80,7 @@ namespace ZooWebsite.Controllers
             {
                 _context.Add(sales);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Shop));
+                return RedirectToAction(nameof(SuccessPage));
             }
             return View(sales);
         }

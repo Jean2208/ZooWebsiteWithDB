@@ -149,17 +149,32 @@
                     <input asp-for="quantity" class="form-control"  />
                     <span asp-validation-for="quantity" class="text-danger"></span>
                 </div>
+                <br>
+                <div class="form-group">
+                    <label asp-for="customer_fname" class="control-label">First Name</label>
+                    <input asp-for="customer_fname" class="form-control" placeholder="John" />
+                    <span asp-validation-for="customer_fname" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="customer_lname" class="control-label">Last Name</label>
+                    <input asp-for="customer_lname" class="form-control" placeholder="Doe" />
+                    <span asp-validation-for="customer_lname" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="customer_address" class="control-label">Address</label>
+                    <input asp-for="customer_address" class="form-control" placeholder="7046 Sugarland Dr" />
+                    <span asp-validation-for="customer_address" class="text-danger"></span>
+                </div>
+
 
                 <div class="form-group">
-                    <input type="submit" value="Buy" class="btn btn-primary" />
+                    <input type="submit" value="Buy" class="btn btn-primary" style="position:absolute; top:700px; right:600px;" />
                 </div>
+                
         </form>
     </div>
 </div>
-<div class="total">
-    <h2>Your total</h2>
-    <h3>23$</h3>
-</div>
+
 
  <br>
  <br>
@@ -172,28 +187,7 @@
             <div class="container">
                 
                     <div class="row">
-                        <div class="col-50">
-                            <h3>Billing Address</h3>
-                            <label for="fname"><i class="fa fa-user"></i> First Name</label>
-                            <input for="customer_fname" class="form-control" />
-                            <label for="lname"><i class="fa fa-user"></i> Last Name</label>
-                            <input type="text" id="fname" name="firstname" placeholder="Doe">
-                            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-                            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
-                            <label for="city"><i class="fa fa-institution"></i> City</label>
-                            <input type="text" id="city" name="city" placeholder="Houston">
-
-                            <div class="row">
-                                <div class="col-50">
-                                    <label for="state">State</label>
-                                    <input type="text" id="state" name="state" placeholder="TX">
-                                </div>
-                                <div class="col-50">
-                                    <label for="zip">Zip</label>
-                                    <input type="text" id="zip" name="zip" placeholder="77004">
-                                </div>
-                            </div>
-                        </div>
+                        
 
                         <div class="col-50">
                             <h3>Payment</h3>
@@ -223,7 +217,7 @@
                         </div>
 
                     </div>
-               
+                
             </div>
         </div>
     </div>
