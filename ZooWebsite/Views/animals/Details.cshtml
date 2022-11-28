@@ -14,11 +14,17 @@
         border-color: black;
         border-style: solid;
         border-width: 1px;
+        position: relative
     }
 
     img {
-        width: 50%;
-        height: 100%;
+        width: 30%;
+        height: 50%;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        border-style: solid;
+        border-width: medium;
     }
 </style>
 
@@ -31,68 +37,68 @@
 <div>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             Name
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.animal_name)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             Scientific Name
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.scientific_name)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             Description
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.description)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             Sex
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.sex)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             Age
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.age)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             Habitat
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.habitat_name)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             Meal Time
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.meal_time)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             Meal Type
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.meal_type)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             Place of Origin
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.place_of_origin)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             Health Status
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.health_records)
         </dd>
         <dd class="col-sm-10">
-            <img src="@Model.image_path"  />
+            <img src="@Model.image_path" />
         </dd>
     </dl>
 </div>

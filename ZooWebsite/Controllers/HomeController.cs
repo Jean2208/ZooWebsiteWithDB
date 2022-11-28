@@ -68,7 +68,7 @@ namespace ZooWebsite.Controllers
         
         
 
-        [Authorize(Roles ="Admin")]
+        [Authorize(Roles ="Manager")]
         public IActionResult Dashboard()
         {
 

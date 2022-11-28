@@ -32,7 +32,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="sales" asp-action="Shop">Shop</a>
                         </li>
-                        @if (User.IsInRole("Employee") || User.IsInRole("Admin"))
+                        @if (User.IsInRole("Employee") || User.IsInRole("Manager"))
                         {
                             <li class="nav-item dropdown" >
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black">
@@ -40,14 +40,14 @@
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                                    @if (User.IsInRole("Employee") || User.IsInRole("Admin"))
+                                    @if (User.IsInRole("Employee") || User.IsInRole("Manager"))
                                     {
                                         <li class="nav-item">
                                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Report1">Animal Report</a>
                                         </li>
                                     }
 
-                                    @if (User.IsInRole("Admin"))
+                                    @if (User.IsInRole("Manager"))
                                     {
                                         <li class="nav-item">
                                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Report2">Revenue Report</a>
@@ -60,7 +60,7 @@
                             </li>
                         }
 
-                          @if (User.IsInRole("Employee") || User.IsInRole("Admin"))
+                          @if (User.IsInRole("Employee") || User.IsInRole("Manager"))
                         {
                             <li class="nav-item dropdown" >
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black">
@@ -68,7 +68,7 @@
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                                    @if (User.IsInRole("Employee") || User.IsInRole("Admin"))
+                                    @if (User.IsInRole("Employee") || User.IsInRole("Manager"))
                                     {
                                         <li class="nav-item">
                                             <a class="nav-link text-dark" asp-area="" asp-controller="animals" asp-action="Index">Animal DE</a>
@@ -79,7 +79,7 @@
                                         </li>
                                     }
 
-                                    @if (User.IsInRole("Admin"))
+                                    @if (User.IsInRole("Manager"))
                                     {
 
                                         <li class="nav-item">
@@ -90,10 +90,10 @@
                             </li>
                         }
 
-                        @if (User.IsInRole("Admin"))
+                        @if (User.IsInRole("Manager"))
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard">Dashboard</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard">Notifications</a>
                             </li>
                         }
 

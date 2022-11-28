@@ -11,6 +11,7 @@
         border-color: black;
         border-style: solid;
         border-width: 1px;
+        position:relative
     }
 
     input::placeholder {
@@ -25,8 +26,14 @@
     }
 
     img{
-        width:50%;
-        height:100%;
+        width:30%;
+        height:30%;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        border-style: solid;
+        border-width: medium;
+
     }
 </style>
 
@@ -45,7 +52,7 @@
                 <input asp-for="animal_name" class="form-control" placeholder="*Required field. Up to 50 characters.*" />
                 <span asp-validation-for="animal_name" class="text-danger"></span>
             </div>
-          <div class="form-group">
+            <div class="form-group">
                 <label asp-for="scientific_name" class="control-label">Scientific Name</label>
                 <input asp-for="scientific_name" class="form-control" placeholder="*Required field. Up to 50 characters.*" />
                 <span asp-validation-for="scientific_name" class="text-danger"></span>
@@ -117,5 +124,7 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

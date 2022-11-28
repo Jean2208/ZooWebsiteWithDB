@@ -12,7 +12,7 @@ using ZooWebsite.Models;
 
 namespace ZooWebsite.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Manager")]
     public class employeesController : Controller
     {
         private readonly ApplicationDbContext _context;

@@ -16,7 +16,7 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace ZooWebsite.Controllers
 {
-    [Authorize(Roles="Employee, Admin")]
+    [Authorize(Roles="Employee, Manager")]
     public class animalsController : Controller
     {
         private readonly ApplicationDbContext _context;
