@@ -249,7 +249,7 @@ namespace ZooWebsite.Controllers
 
                 try
                 {
-                    if (animals.animal_image.Length > 0)
+                    if (animals.animal_image != null && animals.animal_image.Length > 0)
                     {
                         var filepath = Path.Combine(_environment.WebRootPath, "Uploads/Animals/") + animals.animal_image.FileName;
                         var savepath = "/Uploads/Animals/" + animals.animal_image.FileName;
