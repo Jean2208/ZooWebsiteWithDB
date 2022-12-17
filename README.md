@@ -22,7 +22,7 @@ This zoo is a project created with different utilities and functions, including 
 
 ##  🐷 Screenshots
 
-You can find all our screenshots inside the "*Sreenshots*" folder.
+You can find all our screenshots inside the "*Screenshots*" folder.
 
 ![enter image description here](https://i.ibb.co/zsygZz5/Home.png)
 ![enter image description here](https://i.ibb.co/wKftJPX/Our-Animals.png)
