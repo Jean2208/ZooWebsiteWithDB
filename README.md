@@ -4,7 +4,7 @@ This zoo is a project created with different utilities and functions, including 
 
 **Hosting:** AWS Elastic Beanstalk and RDS.
 
-**Front-End:** .NET Framework with C#, HTML and CSS.
+**Front-End:** .NET Framework with C#, HTML, CSS and Looker Studio.
 
 **Database:** MySQL 8.0.28.
 
