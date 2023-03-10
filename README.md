@@ -11,7 +11,7 @@ This zoo is a project created with different utilities and functions, including 
 ### Project developed and created by:
 - Penso, Jean Paul.
 - Gebregziabher, Samuel M.
-- Kallakuri, Karthik Datta. 
+- Kallakuri, Karthik D. 
 - Tran, Francis V.
 - Arredondo, Ana C.
 - Sowden, William Ray.
@@ -20,9 +20,9 @@ This zoo is a project created with different utilities and functions, including 
 
 ***Note:*** *due to costs this website is no longer being hosted.*
 
-##  🐷 Screenshots
+##  🐷 All Screenshots
 
-You can find all our screenshots inside the "*Screenshots*" folder.
+You can find all our screenshots inside the "*Screenshots*" of the folder.
 
 ![enter image description here](https://i.ibb.co/zsygZz5/Home.png)
 ![enter image description here](https://i.ibb.co/wKftJPX/Our-Animals.png)
