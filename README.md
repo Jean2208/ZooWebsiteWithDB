@@ -9,12 +9,12 @@ This zoo is a project created with different utilities and functions, including 
 **Database:** MySQL 8.0.28.
 
 ### Project developed and created by:
-- Penso, Jean Paul.
+- Penso, Jean P.
 - Gebregziabher, Samuel M.
 - Kallakuri, Karthik D. 
 - Tran, Francis V.
 - Arredondo, Ana C.
-- Sowden, William Ray.
+- Sowden, William R.
 
 &nbsp;
 
