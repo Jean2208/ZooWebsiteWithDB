@@ -20,7 +20,7 @@ This zoo is a project created with different utilities and functions, including 
 
 ***Note:*** *due to costs this website is no longer being hosted.*
 
-##  🐷 All Screenshots
+##  🐷 Screenshots
 
 You can find all our screenshots inside the "*Screenshots*" folder.
 
