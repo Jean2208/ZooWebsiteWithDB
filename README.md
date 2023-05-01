@@ -6,7 +6,7 @@ This zoo is a project created with different utilities and functions, including 
 
 **Front-End:** .NET Framework with C#, HTML, CSS and Looker Studio.
 
-**Database:** MySQL 8.0.28.
+**Database:** MySQL.
 
 ### Project developed and created by:
 - Penso, Jean P.
